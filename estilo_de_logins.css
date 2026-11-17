@@ -522,3 +522,372 @@ body {
     }
 
 }
+
+/* login de docenete /
+
+
+
+
+
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #080C14;
+    color: #F4F5F7;
+}
+
+
+/* ==========================================
+   2. DISTRIBUCIÓN PRINCIPAL
+========================================== */
+
+.pagina-docente {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+
+/* ==========================================
+   3. PANEL DE PRESENTACIÓN
+========================================== */
+
+.panel-presentacion {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+    background:
+        radial-gradient(circle at 50% 45%,
+        rgba(0, 91, 234, 0.22),
+        transparent 55%),
+        linear-gradient(145deg, #101B2D, #080C14);
+    border-right: 1px solid rgba(0, 91, 234, 0.35);
+}
+
+.logo-docente {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.logo-docente img {
+    width: 100%;
+    max-width: 410px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 20px rgba(0, 91, 234, 0.25));
+}
+
+
+/* ==========================================
+   4. TEXTO DE PRESENTACIÓN
+========================================== */
+
+.texto-presentacion {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    text-align: center;
+}
+
+.etiqueta-institucional {
+    display: inline-block;
+    padding: 9px 17px;
+    margin-bottom: 15px;
+    border: 1px solid #075BEA;
+    border-radius: 5px;
+    color: #64A1FF;
+    background-color: rgba(0, 91, 234, 0.12);
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.texto-presentacion h1 {
+    color: #D9A928;
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 7px;
+}
+
+.texto-presentacion h2 {
+    color: #FFFFFF;
+    font-size: 25px;
+    margin: 5px 0 15px;
+}
+
+.texto-presentacion p {
+    color: #AEB9C9;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   5. DECORACIÓN DEL PANEL
+========================================== */
+
+.decoracion-panel {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    bottom: -230px;
+    left: -100px;
+    border: 2px solid rgba(0, 91, 234, 0.25);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(0, 91, 234, 0.04),
+        0 0 0 70px rgba(217, 169, 40, 0.03);
+}
+
+
+/* ==========================================
+   6. PANEL DEL FORMULARIO
+========================================== */
+
+.panel-login-docente {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px 55px;
+    background: linear-gradient(160deg, #111C2B, #090F19);
+}
+
+.contenido-login-docente {
+    width: 100%;
+    max-width: 420px;
+    margin: auto;
+}
+
+
+/* ==========================================
+   7. ENCABEZADO DEL LOGIN
+========================================== */
+
+.encabezado-login-docente {
+    margin-bottom: 40px;
+}
+
+.identificador-docente {
+    display: inline-block;
+    color: #D9A928;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.encabezado-login-docente h2 {
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.encabezado-login-docente p {
+    color: #9BAABD;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   8. FORMULARIO
+========================================== */
+
+.formulario-docente {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-docente > label {
+    color: #E5EAF2;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.formulario-docente > input {
+    width: 100%;
+    padding: 17px;
+    margin-bottom: 25px;
+    background-color: #0B1422;
+    border: 1px solid #2A3C54;
+    border-radius: 9px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.formulario-docente > input::placeholder {
+    color: #718198;
+}
+
+.formulario-docente > input:focus {
+    border-color: #075BEA;
+    box-shadow: 0 0 0 3px rgba(0, 91, 234, 0.15);
+}
+
+
+/* ==========================================
+   9. RECORDAR DATOS
+========================================== */
+
+.opciones-login-docente {
+    margin-bottom: 28px;
+}
+
+.recordar-docente {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #AEB9C9;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.recordar-docente input {
+    width: 16px;
+    height: 16px;
+    accent-color: #D9A928;
+}
+
+
+/* ==========================================
+   10. BOTÓN DE INGRESO
+========================================== */
+
+.formulario-docente button {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(100deg, #075BEA, #1679FF);
+    border: 1px solid #398BFF;
+    border-radius: 9px;
+    color: white;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formulario-docente button:hover {
+    background: linear-gradient(100deg, #1679FF, #358EFF);
+    box-shadow: 0 0 25px rgba(0, 91, 234, 0.30);
+    transform: translateY(-3px);
+}
+
+.formulario-docente button:active {
+    transform: scale(0.98);
+}
+
+
+/* ==========================================
+   11. INFORMACIÓN DE AYUDA
+========================================== */
+
+.informacion-docente {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #26364B;
+}
+
+.informacion-docente p {
+    color: #D9A928;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.informacion-docente span {
+    color: #8292A7;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   12. PIE DE PÁGINA
+========================================== */
+
+.footer-docente {
+    text-align: center;
+    padding-top: 25px;
+    color: #64758B;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+
+/* ==========================================
+   13. ADAPTACIÓN A CELULARES
+========================================== */
+
+@media (max-width: 850px) {
+
+    .pagina-docente {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-presentacion {
+        padding: 25px 20px;
+        border-right: none;
+        border-bottom: 1px solid #075BEA;
+    }
+
+    .logo-docente img {
+        max-width: 230px;
+    }
+
+    .texto-presentacion h1 {
+        font-size: 40px;
+    }
+
+    .texto-presentacion h2 {
+        font-size: 21px;
+    }
+
+    .texto-presentacion p {
+        font-size: 13px;
+    }
+
+    .panel-login-docente {
+        padding: 40px 25px;
+    }
+
+    .encabezado-login-docente h2 {
+        font-size: 27px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .logo-docente img {
+        max-width: 190px;
+    }
+
+    .panel-login-docente {
+        padding: 35px 20px;
+    }
+
+    .encabezado-login-docente h2 {
+        font-size: 24px;
+    }
+
+}

@@ -773,3 +773,118 @@ body {
     }
 
 }
+   /* estilos de inivio 
+
+
+
+
+
+   body {
+    background-color: #020d20;
+    color: #eaf4ff;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    border-color: #087fc4;
+}
+
+body > center > table {
+    background-color: #061a35;
+    border: 2px solid #087fc4;
+    box-shadow: 0 0 15px #087fc455;
+    border-radius: 12px;
+}
+
+td {
+    border-color: #087fc4;
+}
+
+h1 {
+    color: #ffffff;
+    text-shadow: 0 0 10px #168bd5;
+}
+
+h2, h3 {
+    color: #f5bd35;
+}
+
+h4 {
+    color: #ffffff;
+}
+
+p {
+    color: #d5eaff;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #176092;
+}
+
+a {
+    color: #48b9ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffd04b;
+}
+
+/* MENU LATERAL */
+body > center > table > tbody > tr > td:first-child {
+    background-color: #03132b;
+    border-right: 2px solid #087fc4;
+}
+
+body > center > table > tbody > tr > td:first-child p {
+    padding: 10px;
+    border-radius: 6px;
+}
+
+body > center > table > tbody > tr > td:first-child p:hover {
+    background-color: #0755a1;
+    color: #ffd04b;
+}
+
+/* BANNER */
+body > center > table > tbody > tr > td:last-child > table:first-child {
+    background: linear-gradient(110deg, #04152d, #07518a, #061b38);
+    border: 2px solid #087fc4;
+    border-left: 5px solid #f5bd35;
+    border-radius: 10px;
+}
+
+/* INDICADORES */
+body > center > table > tbody > tr > td:last-child > table:nth-of-type(2) td {
+    background: linear-gradient(145deg, #0b294b, #04162e);
+    border: 1px solid #087fc4;
+    border-radius: 8px;
+}
+
+body > center > table > tbody > tr > td:last-child > table:nth-of-type(2) h2 {
+    color: #f5bd35;
+    font-size: 32px;
+}
+
+/* ACTIVIDADES */
+body > center > table > tbody > tr > td:last-child > table:nth-of-type(3) td {
+    background-color: #071d39;
+    border: 1px solid #087fc4;
+    border-radius: 8px;
+}
+
+/* FRASE FINAL */
+body > center > table > tbody > tr > td:last-child > table:last-child {
+    background: linear-gradient(90deg, #092c50, #06172f);
+    border: 1px solid #087fc4;
+    border-left: 5px solid #f5bd35;
+    border-radius: 8px;
+}
+
+body > center > table > tbody > tr > td:last-child > table:last-child p {
+    color: #f5d77d;
+    font-style: italic;
+}
