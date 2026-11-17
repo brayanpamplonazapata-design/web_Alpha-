@@ -1,4 +1,3 @@
-
 :root {
     --fondo: #102B50;
     --panel: #16365F;
@@ -37,6 +36,7 @@ body {
         var(--fondo);
     color: var(--blanco);
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #102B50;
 }
 
 img {
@@ -167,13 +167,12 @@ main {
     line-height: 1.7;
 }
 
-
-.etiquetas  {
+.etiquetas {
     display: flex;
     flex-wrap: wrap;
     gap: 9px;
     margin-top: 24px;
-    padding: 0%;
+    padding: 0;
 }
 
 .etiquetas span {
@@ -233,6 +232,87 @@ select:focus {
     box-shadow: 0 0 0 3px #D6A94325;
 }
 
+/* SELECTOR DE ROL (LOGIN) */
+
+.opciones-rol {
+    display: grid;
+    gap: 10px;
+}
+
+.opcion-rol {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--borde);
+    border-radius: 11px;
+    background: #FFFFFF08;
+    color: var(--blanco);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.opcion-rol:hover {
+    border-color: var(--dorado);
+    background: #D6A94312;
+    transform: translateY(-1px);
+}
+
+/* El radio real queda oculto pero sigue funcionando con el teclado y el required */
+.opcion-rol input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    pointer-events: none;
+}
+
+.rol-icono {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid #D6A94360;
+    border-radius: 10px;
+    background: #D6A94320;
+    font-size: 18px;
+}
+
+.rol-nombre {
+    flex: 1;
+}
+
+.rol-marca {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    border: 2px solid #496789;
+    border-radius: 50%;
+    transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.opcion-rol input:checked ~ .rol-marca {
+    border-color: var(--dorado);
+    background: var(--dorado);
+    box-shadow: inset 0 0 0 3px var(--fondo);
+}
+
+.opcion-rol:has(input:checked) {
+    border-color: var(--dorado);
+    background: #D6A94320;
+}
+
+.opcion-rol:has(input:focus-visible) {
+    box-shadow: 0 0 0 3px #D6A94340;
+}
+
 /* BOTON PRINCIPAL */
 
 .boton-principal {
@@ -288,7 +368,7 @@ select:focus {
 
 .rejilla-roles {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
 
@@ -439,4 +519,257 @@ footer {
     .tarjeta-rol {
         min-height: 175px;
     }
+}
+
+/* ===== ESTILOS GENERALES  del login de admin ===== */
+
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #F4F5F7;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 91, 234, 0.18), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(217, 169, 40, 0.12), transparent 35%),
+        linear-gradient(135deg, #080C14, #101827, #080C14);
+}
+
+
+/* ==========================================
+   2. ENCABEZADO Y LOGO
+========================================== */
+
+.encabezado-admin {
+    text-align: center;
+    padding: 20px;
+}
+
+.encabezado-admin img {
+    width: 190px;
+    height: 145px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(0, 91, 234, 0.25));
+}
+
+.encabezado-admin p {
+    margin-top: 5px;
+    color: #D9A928;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+
+/* ==========================================
+   3. CONTENIDO PRINCIPAL
+========================================== */
+
+.contenido-admin {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+
+/* ==========================================
+   4. TARJETA DE ADMINISTRADOR
+========================================== */
+
+.tarjeta-admin {
+    width: 100%;
+    max-width: 480px;
+    padding: 42px;
+    background: linear-gradient(145deg, #151F30, #0E1725);
+    border: 1px solid rgba(0, 91, 234, 0.45);
+    border-radius: 20px;
+    box-shadow:
+        0 0 25px rgba(0, 91, 234, 0.12),
+        0 20px 50px rgba(0, 0, 0, 0.55);
+    text-align: center;
+}
+
+
+/* ==========================================
+   5. ETIQUETA ADMINISTRATIVA
+========================================== */
+
+.etiqueta-admin {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 22px;
+    background-color: rgba(0, 91, 234, 0.15);
+    border: 1px solid #075BEA;
+    border-radius: 5px;
+    color: #64A1FF;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   6. TÍTULOS
+========================================== */
+
+.tarjeta-admin h1 {
+    color: #D9A928;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.descripcion-admin {
+    color: #AEB9C9;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+
+/* ==========================================
+   7. FORMULARIO
+========================================== */
+
+.tarjeta-admin form {
+    text-align: left;
+}
+
+.tarjeta-admin label {
+    display: block;
+    margin-bottom: 10px;
+    color: #E7EDF6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tarjeta-admin input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 25px;
+    background-color: #0A1220;
+    border: 1px solid #293A52;
+    border-radius: 9px;
+    color: #FFFFFF;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.tarjeta-admin input::placeholder {
+    color: #718198;
+}
+
+.tarjeta-admin input:focus {
+    border-color: #075BEA;
+    box-shadow: 0 0 0 3px rgba(0, 91, 234, 0.16);
+}
+
+
+/* ==========================================
+   8. BOTÓN DE INGRESO
+========================================== */
+
+.tarjeta-admin button {
+    width: 100%;
+    padding: 17px;
+    margin-top: 5px;
+    background: linear-gradient(100deg, #D9A928, #F0C44E);
+    border: none;
+    border-radius: 9px;
+    color: #101827;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tarjeta-admin button:hover {
+    background: #F5D36E;
+    box-shadow: 0 0 22px rgba(217, 169, 40, 0.30);
+    transform: translateY(-3px);
+}
+
+.tarjeta-admin button:active {
+    transform: scale(0.98);
+}
+
+
+/* ==========================================
+   9. MENSAJE DE SEGURIDAD
+========================================== */
+
+.mensaje-seguridad {
+    margin-top: 28px;
+    color: #718198;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+
+/* ==========================================
+   10. PIE DE PÁGINA
+========================================== */
+
+.pie-admin {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pie-admin p {
+    color: #718198;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+
+/* ==========================================
+   11. DISEÑO RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .encabezado-admin img {
+        width: 150px;
+        height: 115px;
+    }
+
+    .encabezado-admin p {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .contenido-admin {
+        padding: 20px 15px;
+    }
+
+    .tarjeta-admin {
+        padding: 30px 22px;
+    }
+
+    .tarjeta-admin h1 {
+        font-size: 28px;
+    }
+
+    .pie-admin p {
+        font-size: 9px;
+    }
+
 }

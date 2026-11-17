@@ -3,41 +3,74 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Login Administrador</title>
-    <link rel="stylesheet" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALPHA - Administrador</title>
+    <link rel="stylesheet" href="estilo_de_logins.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>ALPHA</h1>
-        <h2>Inicio de sesión - Administrador</h2>
+    <header class="encabezado-admin">
+
+        <img src="images.jpg alt="Logo ALPHA>
+
+        <p>SISTEMA DE GESTIÓN EDUCATIVA</p>
+
     </header>
 
-    <main>
-        <div class="tarjeta-ingreso">
+    <main class="contenido-admin">
 
-            <h2>ADMINISTRADOR</h2>
-            <p>Ingresa tus datos para acceder al sistema</p>
+        <div class="tarjeta-admin">
+
+            <div class="etiqueta-admin">
+                ACCESO ADMINISTRATIVO
+            </div>
+
+            <h1>BIENVENIDO</h1>
+
+            <p class="descripcion-admin">
+                Ingresa tus credenciales para acceder
+                al panel de administración de ALPHA.
+            </p>
 
             <form>
 
-                <label for="Usuario">Usuario</label>
-                <input type="text" id="Usuario" name="usuario" placeholder="Correo institucional">
+                <label for="usuario">USUARIO</label>
 
-                <label for="Contraseña">Contraseña</label>
-                <input type="password" id="Contraseña" name="contraseña" placeholder="Ingresa tu contraseña">
+                <input
+                    type="text"
+                    id="usuario"
+                    name="usuario"
+                    placeholder="Correo institucional"
+                >
 
-                <button type="submit">Iniciar sesión</button>
+                <label for="contrasena">CONTRASEÑA</label>
+
+                <input
+                    type="password"
+                    id="contrasena"
+                    name="contrasena"
+                    placeholder="Ingresa tu contraseña"
+                >
+
+                <button type="submit">
+                    INICIAR SESIÓN
+                </button>
 
             </form>
 
-          
+            <p class="mensaje-seguridad">
+                ACCESO PARA ADMINISTRADORES
+            </p>
 
         </div>
+
     </main>
 
-    <footer>
-        <p>© 2026 ALPHA - Sistema de gestión</p>
+    <footer class="pie-admin">
+
+        <p>ALPHA © 2026 | SISTEMA DE GESTIÓN DE ALFABETIZACIÓN</p>
+
     </footer>
 
 </body>

@@ -1,0 +1,524 @@
+
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #F4F5F7;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 91, 234, 0.18), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(217, 169, 40, 0.12), transparent 35%),
+        linear-gradient(135deg, #080C14, #101827, #080C14);
+}
+
+
+/* ==========================================
+   2. ENCABEZADO Y LOGO
+========================================== */
+
+.encabezado-admin {
+    text-align: center;
+    padding: 20px;
+}
+
+.encabezado-admin img {
+    width: 190px;
+    height: 145px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(0, 91, 234, 0.25));
+}
+
+.encabezado-admin p {
+    margin-top: 5px;
+    color: #D9A928;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+
+/* ==========================================
+   3. CONTENIDO PRINCIPAL
+========================================== */
+
+.contenido-admin {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+
+/* ==========================================
+   4. TARJETA DE ADMINISTRADOR
+========================================== */
+
+.tarjeta-admin {
+    width: 100%;
+    max-width: 480px;
+    padding: 42px;
+    background: linear-gradient(145deg, #151F30, #0E1725);
+    border: 1px solid rgba(0, 91, 234, 0.45);
+    border-radius: 20px;
+    box-shadow:
+        0 0 25px rgba(0, 91, 234, 0.12),
+        0 20px 50px rgba(0, 0, 0, 0.55);
+    text-align: center;
+}
+
+
+/* ==========================================
+   5. ETIQUETA ADMINISTRATIVA
+========================================== */
+
+.etiqueta-admin {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 22px;
+    background-color: rgba(0, 91, 234, 0.15);
+    border: 1px solid #075BEA;
+    border-radius: 5px;
+    color: #64A1FF;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   6. TÍTULOS
+========================================== */
+
+.tarjeta-admin h1 {
+    color: #D9A928;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.descripcion-admin {
+    color: #AEB9C9;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+
+/* ==========================================
+   7. FORMULARIO
+========================================== */
+
+.tarjeta-admin form {
+    text-align: left;
+}
+
+.tarjeta-admin label {
+    display: block;
+    margin-bottom: 10px;
+    color: #E7EDF6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tarjeta-admin input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 25px;
+    background-color: #0A1220;
+    border: 1px solid #293A52;
+    border-radius: 9px;
+    color: #FFFFFF;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.tarjeta-admin input::placeholder {
+    color: #718198;
+}
+
+.tarjeta-admin input:focus {
+    border-color: #075BEA;
+    box-shadow: 0 0 0 3px rgba(0, 91, 234, 0.16);
+}
+
+
+/* ==========================================
+   8. BOTÓN DE INGRESO
+========================================== */
+
+.tarjeta-admin button {
+    width: 100%;
+    padding: 17px;
+    margin-top: 5px;
+    background: linear-gradient(100deg, #D9A928, #F0C44E);
+    border: none;
+    border-radius: 9px;
+    color: #101827;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tarjeta-admin button:hover {
+    background: #F5D36E;
+    box-shadow: 0 0 22px rgba(217, 169, 40, 0.30);
+    transform: translateY(-3px);
+}
+
+.tarjeta-admin button:active {
+    transform: scale(0.98);
+}
+
+
+/* ==========================================
+   9. MENSAJE DE SEGURIDAD
+========================================== */
+
+.mensaje-seguridad {
+    margin-top: 28px;
+    color: #718198;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+
+/* ==========================================
+   10. PIE DE PÁGINA
+========================================== */
+
+.pie-admin {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pie-admin p {
+    color: #718198;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+
+/* ==========================================
+   11. DISEÑO RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .encabezado-admin img {
+        width: 150px;
+        height: 115px;
+    }
+
+    .encabezado-admin p {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .contenido-admin {
+        padding: 20px 15px;
+    }
+
+    .tarjeta-admin {
+        padding: 30px 22px;
+    }
+
+    .tarjeta-admin h1 {
+        font-size: 28px;
+    }
+
+    .pie-admin p {
+        font-size: 9px;
+    }
+
+}
+
+
+/* estilos de estudiante /*
+
+/* estilpos para el login estudinate */
+
+
+
+/* =====================================
+   1. CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #F4F8FC;
+    background: linear-gradient(145deg, #102B49, #164B70, #103451);
+}
+
+
+/* =====================================
+   2. ENCABEZADO DEL ESTUDIANTE
+===================================== */
+
+.encabezado-estudiante {
+    text-align: center;
+    padding: 30px 20px 15px;
+}
+
+.encabezado-estudiante h1 {
+    font-size: 65px;
+    font-weight: 800;
+    letter-spacing: 7px;
+    color: #E4B64E;
+}
+
+.encabezado-estudiante p {
+    font-size: 19px;
+    color: #C8DFEE;
+    margin-top: 5px;
+}
+
+
+/* =====================================
+   3. CONTENIDO PRINCIPAL
+===================================== */
+
+.contenido-estudiante {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 20px;
+}
+
+
+/* =====================================
+   4. TARJETA DEL ESTUDIANTE
+===================================== */
+
+.tarjeta-estudiante {
+    width: 100%;
+    max-width: 490px;
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(145deg, #1B5279, #174365);
+    border: 1px solid #397394;
+    border-radius: 25px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =====================================
+   5. IDENTIFICACIÓN DEL ESTUDIANTE
+===================================== */
+
+.icono-estudiante {
+    width: 115px;
+    height: 115px;
+    margin: 0 auto 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(145deg, #E4B64E, #D4A33B);
+    border: 5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+.icono-estudiante span {
+    color: #153451;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* =====================================
+   6. TÍTULOS Y DESCRIPCIÓN
+===================================== */
+
+.tarjeta-estudiante h2 {
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.descripcion-estudiante {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #C8DDEA;
+    margin-bottom: 30px;
+}
+
+
+/* =====================================
+   7. CAMPOS DEL FORMULARIO
+===================================== */
+
+.tarjeta-estudiante form {
+    text-align: left;
+}
+
+.tarjeta-estudiante form > label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #EAF4FA;
+    margin-bottom: 9px;
+}
+
+.tarjeta-estudiante form > input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 23px;
+    background-color: #123C5F;
+    border: 1px solid #397394;
+    border-radius: 12px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.tarjeta-estudiante form > input::placeholder {
+    color: #AFC9DA;
+}
+
+.tarjeta-estudiante form > input:focus {
+    border-color: #E4B64E;
+    box-shadow: 0 0 0 3px rgba(228, 182, 78, 0.15);
+}
+
+
+/* =====================================
+   8. OPCIÓN RECORDARME
+===================================== */
+
+.opciones-estudiante {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.recordar-estudiante {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #D9E8F3;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.recordar-estudiante input {
+    width: 16px;
+    height: 16px;
+    accent-color: #E4B64E;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   9. BOTÓN DE INGRESO
+===================================== */
+
+.tarjeta-estudiante button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #E4B64E, #D6A43D);
+    border: none;
+    border-radius: 12px;
+    color: #153451;
+    font-size: 17px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tarjeta-estudiante button:hover {
+    background: #F4CD73;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(228, 182, 78, 0.20);
+}
+
+.tarjeta-estudiante button:active {
+    transform: scale(0.98);
+}
+
+
+/* =====================================
+   10. MENSAJE DE AYUDA
+===================================== */
+
+.ayuda-estudiante {
+    margin-top: 25px;
+    color: #BBD2E3;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =====================================
+   11. PIE DE PÁGINA
+===================================== */
+
+.pie-estudiante {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    color: #AFC8DA;
+    font-size: 13px;
+}
+
+
+/* =====================================
+   12. ADAPTACIÓN A CELULARES
+===================================== */
+
+@media (max-width: 600px) {
+
+    .encabezado-estudiante h1 {
+        font-size: 48px;
+    }
+
+    .encabezado-estudiante p {
+        font-size: 16px;
+    }
+
+    .tarjeta-estudiante {
+        padding: 30px 22px;
+    }
+
+    .tarjeta-estudiante h2 {
+        font-size: 27px;
+    }
+
+    .icono-estudiante {
+        width: 95px;
+        height: 95px;
+    }
+
+    .pie-estudiante {
+        font-size: 11px;
+    }
+
+}
